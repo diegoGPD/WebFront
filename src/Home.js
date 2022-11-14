@@ -1,10 +1,8 @@
 import React from "react";
 import {Button, CardActions, Container, CssBaseline, Grid, Typography} from "@mui/material";
-import { makeStyles } from "@mui/styles"
 import {AppBar, Card, Toolbar} from "@mui/material";
 //import { StrictMode } from "react";
 //import ReactDOM from "react-dom/client";
-
 const cards = [1, 1, 1, 1, 1, 1, 1];
 
 export default function Home() {
