@@ -9,6 +9,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -67,14 +68,14 @@ const Login = () => {
                     control={<Checkbox value='remember' color='primary' />}
                     label='Recordar usuario'
                 />
-                <Button
+                <Link
                     type='submit'
                     variant='contained'
                     sx={{ mt: 3, mb: 4, mx: "auto" }}
-                    onClick={() => { history.push('/home') }}
+                    to="/home"
                 >
                   Iniciar Sesión
-                </Button>
+                </Link>
               </Box>
             </Paper>
           </Box>

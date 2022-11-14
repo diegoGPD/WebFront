@@ -1,40 +1,13 @@
 import React from "react";
-import {Button, CardActions, Container, CssBaseline, Grid, makeStyles, Typography} from "@mui/material";
-import {AppBar, Card, Toolbar} from "material";
+import {Button, CardActions, Container, CssBaseline, Grid, Typography} from "@mui/material";
+import { makeStyles } from "@mui/styles"
+import {AppBar, Card, Toolbar} from "@mui/material";
 //import { StrictMode } from "react";
 //import ReactDOM from "react-dom/client";
-
-
-const useStyles = makeStyles((theme) => ({
-    icon: {
-        marginRight: theme.spacing(2)
-    },
-    heroContent: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(8, 0, 6)
-    },
-    cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8)
-    },
-    card: {
-        height: "100%",
-        display: "flex",
-        flexDirection: "column"
-    },
-    cardContent: {
-        flexGrow: 1
-    },
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(6)
-    }
-}));
 
 const cards = [1, 1, 1, 1, 1, 1, 1];
 
 export default function Home() {
-    const classes = useStyles();
 
     return (
         <React.Fragment>
@@ -47,7 +20,7 @@ export default function Home() {
                 </Toolbar>
             </AppBar>
             <main>
-                <div className={classes.heroContent}>
+                <div >
                     <Container maxWidth="sm">
                         <Typography
                             component="h1"
@@ -69,12 +42,12 @@ export default function Home() {
 
                     </Container>
                 </div>
-                <Container className={classes.cardGrid} maxWidth="md">
+                <Container maxWidth="md">
                     <Grid container spacing={4}>
                         {cards.map((card) => (
                             <Grid item key={card} xs={12} sm={6} md={4}>
-                                <Card className={classes.card}>
-                                    <cardContent className={classes.cardContent}>
+                                <Card >
+                                    <cardContent >
                                         <Typography gutterBottom variant="h5" component="h2">
                                             Cliente
                                         </Typography>
