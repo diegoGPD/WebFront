@@ -29,8 +29,8 @@ export default class Chat extends Component {
 
       setTimeout(async() => {
         try {
-            const message = await axios.get(`https://web-backend-tec.herokuapp.com/checklogin?email=bob2@mail.com&password=bob`,[]);
-            const message2 = await axios.get(`https://web-backend-tec.herokuapp.com/whatsapp`,[]);
+            const message = await axios.get(`https://web-backend-tec.herokuapp.com/checklogin?email=bob2@mail.com&password=bob`,{headers: {'Access-Control-Allow-Origin': '*'}});
+            const message2 = await axios.get(`https://web-backend-tec.herokuapp.com/whatsapp`,{headers: {'Access-Control-Allow-Origin': '*'}});
             console.log(message2);
             let updatedMessages = [...this.state.messages, {text:"HIHIHA SOY FALSO"}];
             this.setState({
