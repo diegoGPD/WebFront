@@ -44,7 +44,7 @@ export default class Chat extends Component {
         let updatedMessage2 = [...this.state.messages, {text:"HIHIHA SOY FALSO"}];
         // update state
         this.setState({
-            messages: updatedMessages2
+            messages: updatedMessage2
         });
       }, 2000)
     }
