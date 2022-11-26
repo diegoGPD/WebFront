@@ -5,12 +5,12 @@ import Chat from "./chat/Chat";
 //import { StrictMode } from "react";
 //import ReactDOM from "react-dom/client";
 const cards = [{key:1, name: "John"},{key:2, name: "Mark"},{key:3, name: "Joe"},{key:4, name: "Griffin"},{key:5, name: "Timmy"}];
-let cliente = false;
+let cliente = !false;
 
 export default function Home() {
     const [mostrarChat, setMostrarChat] = useState(false);
     const [cardClinete, setCardClinete] = useState([]);
-    const [buttonClick, setButtonClick] = useState(false);
+    const [buttonClick, setButtonClick] = useState(true);
 
     const necesitoAyuda = () =>{
         setCardClinete([{key:1, name: "John"}]) 

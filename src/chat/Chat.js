@@ -32,7 +32,6 @@ export default class Chat extends Component {
       setTimeout(async() => {
         try {
             const message = await axios.get(`https://web-backend-tec.herokuapp.com/whatsapp`);
-            console.log(message.data)
             let updatedMessages = [...this.state.messages, {text: message.data}];
             this.setState({
                 messages: updatedMessages
