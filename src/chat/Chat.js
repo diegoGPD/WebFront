@@ -5,6 +5,8 @@ import "./ChatStyle.css";
 import ChatWindow from "./ChatWindow";
 import ChatComposer from "./ChatComposer";
 
+let datos = ['Tengo un problema', 'No funciona mi producto', 'clave 9898', 'ok ya le mandare info mas adelante'];
+
 export default class Chat extends Component {
   constructor(props) {
     super(props);
@@ -29,22 +31,21 @@ export default class Chat extends Component {
 
       setTimeout(async() => {
         try {
-            const message = await axios.get(`https://web-backend-tec.herokuapp.com/checklogin?email=bob2@mail.com&password=bob`);
-            const message2 = await axios.get(`https://web-backend-tec.herokuapp.com/whatsapp`);
-            console.log(message2);
-            let updatedMessages = [...this.state.messages, {text:"HIHIHA SOY FALSO"}];
+            const message = await axios.get(`https://web-backend-tec.herokuapp.com/whatsapp`);
+            console.log(message)
+            let updatedMessages = [...this.state.messages, {text: message.data}];
             this.setState({
                 messages: updatedMessages
             });
-            console.log(message)
 
         } catch (e) {
             console.log(e)
         }
-        let updatedMessage2 = [...this.state.messages, {text:"HIHIHA SOY FALSO"}];
+        let updatedMessages2 = [...this.state.messages, {text: datos[0]}];
+        datos.shift();    
         // update state
         this.setState({
-            messages: updatedMessage2
+            messages: updatedMessages2
         });
       }, 2000)
     }
