@@ -11,6 +11,10 @@ import {
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const aver = async() => {
+    const message = await axios.get(`https://web-backend-tec.herokuapp.com/checklogin?admin@tec.mx&password=admin`);
+    console.log(message.data);
+  }
   return (
       <Box>
         <Container component='main' maxWidth='xs'>
@@ -68,6 +72,7 @@ const Login = () => {
                     label='Recordar usuario'
                 />
                 <Link
+                    onClick={aver}
                     type='submit'
                     variant='contained'
                     sx={{ mt: 3, mb: 4, mx: "auto" }}
